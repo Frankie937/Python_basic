@@ -1,0 +1,78 @@
+<나도코딩_기본편(6시간)> (**은 퀴즈 말고 필기내용) 
+
+**리스트- 순서를 가진 객체의 집합, '[ ]' 대괄호 사용
+**사전(딕셔너리)-key 와 value 형태 (key는 해당 값 있어야 함 & 중복 안됨) ,'{ }' 중괄호 사용 
+**튜플- 리스트와 다르게 내용 변경이나 추가할 수 없음.
+(속도가 리스트보다 빠름. 그러므로 변경되지 않는 목록을 사용할 때 튜플 활용!)
+
+1. 퀴즈
+station= "사당"->"신도림"->"인천공항"
+(순서대로 바꿔서)
+print(station+"행 열차가 들어오고 있습니다.")
+
+2. 퀴즈
+from random import *
+date=randint(4,28)
+print("오프라인 스터디 모임 날짜는 매월"+str(date)+"일로 선정되었습니다.")
+
+3. 퀴즈
+---혼자---
+site= 
+방법1=6번째 이후 문자부터 첫번째 '.' 직전 까지의 문자 출력 
+방법2= 2번째 '/' 다음부 문자부터 첫번째 '.' 직전 까지의 문자 출력
+print(site 변수의 [0:2]까지 출력+stie.len() or len(site)??+ site.count('e')+"!")
+---정답)---
+url = "http://naver.com"
+my_str = url.replace("http://", "")
+my_str = my_str[ :my_str.index".")]
+password=my_str[0:3] + str(len(my_str))+ str(my_str.count("e")) + "!"
+print(password)
+pirnt("{0} 의 비밀번호는 {1} 입니다.".format(url, password))
+
+4. 퀴즈
+id =[1,2,...,20]
+차집합 활용 
+from random import * 
+chicken=randomint(id) 
+id_chicken= chicken
+방법1_(차집합 이용)
+coffee1= random(set(id)-set(chicken))  or random(set(id).defference(set(chicken)))
+coffee2_fu= set(chicken).union(coffee1)
+coffee2= random(set(id)-set(coffee2_fu))  or random(set(id).defference(set(coffee2_fu)))
+coffee3_fu= set(coffe2_fu).union(coffee2)
+coffee3= random(set(id)-set(coffee3_fu))  or random(set(id).defference(set(coffee3_fu)))
+id_coffee=list (coffee1, coffee2, coffee3)
+print("'-- 당첨자 발표 --
+치킨 당첨자 : chicken 
+커피 당첨자 : id_coffee
+-- 축하합니다 --""")
+#퀴즈_4
+from random import *
+id = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+shuffle(id)
+chicken = sample(id, 1)
+id_b = set(id)-set(chicken)
+id_c = list(id_b)
+shuffle(id_c)
+coffee = sample(id_c, 3)
+print("""---당첨자 발표---
+치킨 당첨자 : {0}
+커피 당첨자 : {1}
+--축하합니다--""" .format(chicken, coffee))
+
+#퀴즈_4 정답(나도코딩)
+users = range(1,21) #1부터 20까지 숫자 생성
+#print(type(users)) #-> users 타입이 range로 나옴 
+users = list(users)
+shuffle(users)
+winners = sample(users, 4)
+print("""---당첨자 발표---
+치킨 당첨자 : {0} 
+커피 당첨자 : {1}
+--축하합니다--""" .format(winners[0], winners[1:]))
+
+
+
+
+
+
